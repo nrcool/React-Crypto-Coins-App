@@ -1,6 +1,6 @@
 import { ThemeProvider,createTheme
  } from '@material-ui/core'
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { MyContext } from './MyContext'
 const darkTheme= createTheme({
     palette:{

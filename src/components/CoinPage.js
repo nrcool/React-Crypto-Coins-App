@@ -72,7 +72,7 @@ const [coin,setCoin]=useState()
   } 
   useEffect(()=>{
     fetchCoinData(id)
-  },[])
+  },[id])
 
   const classes = useStyle()
 

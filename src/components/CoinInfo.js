@@ -49,7 +49,7 @@ const {currency} =useContext(MyContext)
    
     useEffect(()=>{
         gethistoricalData(coin.id,days,currency)
-    },[days,currency])
+    },[days,currency,coin.id])
   return (
       <div className={classes.container}>
         {!history | flag===false ? (
