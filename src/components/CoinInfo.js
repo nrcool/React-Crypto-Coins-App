@@ -2,7 +2,9 @@ import axios from 'axios'
 import React, { useContext, useEffect,useState } from 'react'
 import { HistoricalChart } from '../config/api'
 import { chartDays } from '../config/data'
-import { Chart as ChartJS } from 'chart.js/auto'
+import { Chart, LineController, LineElement, PointElement, LinearScale, Title,CategoryScale } from 'chart.js';
+
+
 import { Line }            from 'react-chartjs-2'
 import { MyContext } from '../context/MyContext'
 import {
@@ -13,7 +15,7 @@ import {
 
 
 export default function CoinInfo({coin}) {
-   
+  Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
     const useStyles = makeStyles((theme) => ({
         container: {
           width: "70vw",
@@ -44,7 +46,7 @@ const {currency} =useContext(MyContext)
         console.log(data)
         setflag(true)
         setHistory(data.prices)
-      
+        
     }
    
     useEffect(()=>{
