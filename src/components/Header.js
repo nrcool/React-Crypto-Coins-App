@@ -11,6 +11,7 @@ const useStyles= makeStyles(()=>({
         fontFamily:"Montserrat",
         cursor:"pointer",
         fontWeight:"bold",
+        fontSize:30
 
     }
 }))
